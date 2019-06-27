@@ -34,7 +34,7 @@
     ],
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/easy-swoole/doc/edit/master/Manual/3.x/Cn/",
+            "base": "https://github.com/easy-swoole/doc/edit/3.1.x/Manual/3.x/Cn/",
             "label": "编辑本页面"
         },
         "github": {
@@ -48,11 +48,11 @@
                     "text": "EASYSWOOLE v3 中文手册"
                 },
                 {
-                    "value": "https://www.easyswoole.com/Manual/1.x/Cn/_book/",
+                    "value": "https://github.com/easy-swoole/doc/tree/master/Manual/1.x/Cn",
                     "text": "EASYSWOOLE v1 中文手册"
                 },
                 {
-                    "value": "https://www.easyswoole.com/Manual/2.x/Cn/_book/",
+                    "value": "https://github.com/easy-swoole/doc/tree/master/Manual/2.x/Cn",
                     "text": "EASYSWOOLE v2 中文手册"
                 }
             ]

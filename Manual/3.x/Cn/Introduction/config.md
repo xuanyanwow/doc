@@ -24,23 +24,13 @@ EasySwoole框架提供了非常灵活自由的全局配置功能，配置文件�
                   'worker_num'       => 8,//运行的  worker进程数量
                   'max_request'      => 5000,// worker 完成该数量的请求后将退出，防止内存溢出
                   'task_worker_num'  => 8,//运行的 task_worker 进程数量
-                  'task_max_request' => 1000// task_worker 完成该数量的请求后将退出，防止内存溢出
+                  'task_max_request' => 1000,// task_worker 完成该数量的请求后将退出，防止内存溢出
+                  'reload_async' => true,//设置异步重启开关。设置为true时，将启用异步安全重启特性，Worker进程会等待异步事件完成后再退出。
+                  'task_enable_coroutine' => true//开启后自动在onTask回调中创建协程
               ]
           ],
           'TEMP_DIR'      => null,//临时文件存放的目录
           'LOG_DIR'       => null,//日志文件存放的目录
-          'CONSOLE'       => [//console控制台组件配置
-              'ENABLE'         => true,//是否开启
-              'LISTEN_ADDRESS' => '127.0.0.1',//监听地址
-              'PORT'           => 9500,//监听端口
-              'USER'           => 'root',//验权用户名
-              'PASSWORD'       => '123456'//验权用户名
-          ],
-          'FAST_CACHE'    => [//fastCache组件
-              'PROCESS_NUM' => 0,//进程数,大于0才开启
-              'BACKLOG'     => 256,//数据队列缓冲区大小
-          ],
-          'DISPLAY_ERROR' => true,//是否开启错误显示
       ];
 ```
 
@@ -132,3 +122,26 @@ Di::getInstance()->set(SysConst::HTTP_CONTROLLER_POOL_MAX_NUM,15);//http控制�
     $test_config_value_1 = Config::getInstance()->getDynamicConf('test_config_value');//获取一个配置
     Config::getInstance()->delDynamicConf('test_config_value');//删除一个配置
 ```
+
+## 其他
+
+- QQ交流群
+    - VIP群 579434607 （本群需要付费599元）
+    - EasySwoole官方一群 633921431(已满)
+    - EasySwoole官方二群 709134628
+    
+- 商业支持：
+    - QQ 291323003
+    - EMAIL admin@fosuss.com
+        
+- 作者微信
+
+    ![](http://easyswoole.com/img/authWx.jpg)    
+    
+- [捐赠](../donate.md)
+    您的捐赠是对Swoole项目开发组最大的鼓励和支持。我们会坚持开发维护下去。 您的捐赠将被用于:
+        
+  - 持续和深入地开发
+  - 文档和社区的建设和维护
+  
+- **easySwoole** 的文档采用 **GitBook** 作为文档撰写工具，若您在使用过程中，发现文档有需要纠正 / 补充的地方，请 **fork** 项目的文档仓库，进行修改补充，提交 **Pull Request** 并联系我们

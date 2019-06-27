@@ -4,6 +4,10 @@
 
 > 关于 Composer 的安装可以参照 [Composer中国全量镜像](https://pkg.phpcomposer.com/#how-to-install-composer) 的安装教程,另外 Composer中国 已经很久没有更新了，请大家使用梯子或者是其他镜像。
 
+## 切换laravel镜像
+````
+composer config -g repo.packagist composer https://packagist.laravel-china.org
+````
 ## Composer 安装
 
 按下面的步骤进行手动安装
@@ -48,7 +52,7 @@ php -ini | grep disable_functions
 如果是其他原因导致的该报错，可以在项目根目录下手工执行以下命令，将可执行文件链接出来 :
 
 ```bash
-cd vendor/bin/ && rm -rf easyswoole.php && ln -s ../easyswoole/easyswoole/bin/easyswoole.php easyswoole.php && cd ../../
+cd vendor/bin/ && rm -rf easyswoole && ln -s ../easyswoole/easyswoole/bin/easyswoole easyswoole && cd ../../
 ```
 
 或者直接指向EasySwoole的管理脚本执行安装命令 : 
@@ -238,3 +242,26 @@ project                   项目部署目录
 > 如果项目还需要使用其他的静态资源文件，建议使用 **Nginx** / **Apache** 作为前端Web服务，将请求转发至 easySwoole 进行处理，并添加一个 `Public` 目录作为Web服务器的根目录
 
 > 注意!请不要将框架主目录作为web服务器的根目录,否则dev.env,produce.env配置将会是可访问的,也可自行排除该文件(3.1.2已经改为dev.php,produce.php,但依旧建议设置到Public)
+
+## 其他
+
+- QQ交流群
+    - VIP群 579434607 （本群需要付费599元）
+    - EasySwoole官方一群 633921431(已满)
+    - EasySwoole官方二群 709134628
+    
+- 商业支持：
+    - QQ 291323003
+    - EMAIL admin@fosuss.com
+        
+- 作者微信
+
+    ![](http://easyswoole.com/img/authWx.jpg)    
+    
+- [捐赠](../donate.md)
+    您的捐赠是对Swoole项目开发组最大的鼓励和支持。我们会坚持开发维护下去。 您的捐赠将被用于:
+        
+  - 持续和深入地开发
+  - 文档和社区的建设和维护
+  
+- **easySwoole** 的文档采用 **GitBook** 作为文档撰写工具，若您在使用过程中，发现文档有需要纠正 / 补充的地方，请 **fork** 项目的文档仓库，进行修改补充，提交 **Pull Request** 并联系我们
